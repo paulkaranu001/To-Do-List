@@ -1,6 +1,6 @@
 ﻿namespace To_Do_List
 {
-    partial class toDoList
+    partial class ToDoList
     {
         /// <summary>
         ///  Required designer variable.
@@ -37,8 +37,8 @@
             editButton = new Button();
             deleteButton = new Button();
             SaveButton = new Button();
-            toDoListView = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)toDoListView).BeginInit();
+            ToDoListView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)ToDoListView).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -89,7 +89,7 @@
             newbutton.Name = "newbutton";
             newbutton.Size = new Size(300, 51);
             newbutton.TabIndex = 5;
-            newbutton.Text = "New";
+            newbutton.Text = "NEW";
             newbutton.UseVisualStyleBackColor = true;
             newbutton.Click += newbutton_Click;
             // 
@@ -101,6 +101,7 @@
             editButton.TabIndex = 6;
             editButton.Text = "EDIT";
             editButton.UseVisualStyleBackColor = true;
+            editButton.Click += editButton_Click;
             // 
             // deleteButton
             // 
@@ -110,6 +111,7 @@
             deleteButton.TabIndex = 7;
             deleteButton.Text = "DELETE";
             deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.Click += deleteButton_Click;
             // 
             // SaveButton
             // 
@@ -119,25 +121,26 @@
             SaveButton.TabIndex = 8;
             SaveButton.Text = "SAVE";
             SaveButton.UseVisualStyleBackColor = true;
+            SaveButton.Click += SaveButton_Click;
             // 
-            // toDoListView
+            // ToDoListView
             // 
-            toDoListView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            toDoListView.BackgroundColor = Color.White;
-            toDoListView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            toDoListView.Location = new Point(21, 288);
-            toDoListView.Name = "toDoListView";
-            toDoListView.RowHeadersWidth = 51;
-            toDoListView.Size = new Size(1346, 588);
-            toDoListView.TabIndex = 9;
+            ToDoListView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            ToDoListView.BackgroundColor = Color.White;
+            ToDoListView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            ToDoListView.Location = new Point(21, 295);
+            ToDoListView.Name = "ToDoListView";
+            ToDoListView.RowHeadersWidth = 51;
+            ToDoListView.Size = new Size(1346, 588);
+            ToDoListView.TabIndex = 9;
             // 
-            // toDoList
+            // ToDoList
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Gray;
+            BackColor = Color.Fuchsia;
             ClientSize = new Size(1362, 872);
-            Controls.Add(toDoListView);
+            Controls.Add(ToDoListView);
             Controls.Add(SaveButton);
             Controls.Add(deleteButton);
             Controls.Add(editButton);
@@ -147,10 +150,10 @@
             Controls.Add(descriptionTextBox);
             Controls.Add(titleTextBox);
             Controls.Add(label1);
-            Name = "toDoList";
+            Name = "ToDoList";
             Text = "To Do List ";
             Load += toDoList_Load;
-            ((System.ComponentModel.ISupportInitialize)toDoListView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ToDoListView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -166,6 +169,6 @@
         private Button editButton;
         private Button deleteButton;
         private Button SaveButton;
-        private DataGridView toDoListView;
+        private DataGridView ToDoListView;
     }
 }
